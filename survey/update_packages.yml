@@ -1,0 +1,13 @@
+---
+- hosts: all
+  gather_facts: no
+  tasks:
+- name: Update and install required packages
+    yum:
+      name: "{{ package_names }}"
+      state: latest
+      update_cache: yes
+
+  -  debug:
+       msg: "On {{ inventory_hostname }} machine, following packages have been installed/updated {{ package_names }}"
+
