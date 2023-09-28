@@ -1,7 +1,8 @@
 ---
 - hosts: all
   gather_facts: no
-  package_names: "test message"
+  vars:
+    package_names: "test message"
   tasks:
   - name: Update and install required packages
     ansible.builtin.yum:
