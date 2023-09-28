@@ -2,8 +2,8 @@
 - hosts: all
   gather_facts: no
   tasks:
-- name: Update and install required packages
-    yum:
+  - name: Update and install required packages
+    ansible.builtin.yum:
       name: "{{ package_names }}"
       state: latest
       update_cache: yes
