@@ -9,7 +9,7 @@
       changed_when: false
     - name: display package count
       debug:
-        msg: {{ updates.stdout }}
+        msg: "{{ updates.stdout }}"
     - name: display package count
       debug:
-        msg: {{ reboot_required }}
+        msg: "{{ reboot_required }}"
