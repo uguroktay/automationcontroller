@@ -8,9 +8,12 @@
       args:
         warn: false
       register: updates
-    - name: display package count
-      debug:
-        msg: "Found {{ updates.stdout_lines | length }} packages that needs updating:\n\n{{ updates.stdout }}"
+ #   - name: display package count
+ #     debug:
+ #       msg: "Found {{ updates.stdout_lines | length }} packages that needs updating:\n\n{{ updates.stdout }}"
+     - name: display package count
+       debug:
+         msg: "{ updates.stdout }}"
     - when: updates.stdout_lines | length > 0
       block:
         - name: install updates using yum
