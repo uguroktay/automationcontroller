@@ -6,7 +6,7 @@
   tasks:
   - debug:
       msg: "{{ package_name }}"
-  - name: Update and install required packages
+  - name: Update required packages
     ansible.builtin.dnf:
       name: "{{ package_name }}"
       state: latest
