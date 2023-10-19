@@ -1,13 +1,15 @@
 ---
 - hosts: localhost
   gather_facts: no
+  vars:
+    package_name: ntpd
   tasks:
   - name: Update and install required packages
-    ansible.builtin.yum:
-      name: "{{ package_names }}"
+    ansible.builtin.dnf:
+      name: "{{ package_name }}"
       state: latest
       update_cache: yes
 
   - debug:
-      msg: "On {{ inventory_hostname }} machine, following packages have been installed/updated {{ package_names }}"
+      msg: "On {{ inventory_hostname }} machine, following packages have been installed/updated {{ package_name }}"
 
