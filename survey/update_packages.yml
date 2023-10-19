@@ -4,6 +4,8 @@
   vars:
     package_name: ntpd
   tasks:
+  - debug:
+      msg: "{{ package_name }}"
   - name: Update and install required packages
     ansible.builtin.dnf:
       name: "{{ package_name }}"
