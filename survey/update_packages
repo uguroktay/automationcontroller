@@ -1,9 +1,12 @@
 ---
 - hosts: rhel_servers
-  gather_facts: yes
+  gather_facts: no
   tasks:
+  - debug:
+      msg: "{{ package_name }}"
   - name: Update required packages
     ansible.builtin.dnf:
-      name: *
+      name: "{{ package_name }}"
       state: latest
+      update_only: yes
       update_cache: yes
