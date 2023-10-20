@@ -1,6 +1,0 @@
----
-plugin: ansible.builtin.constructed
-strict: true
-keyed_groups:
-  - key: platform_details
-    separator: ''
