@@ -1,10 +1,6 @@
 ---
 plugin: ansible.builtin.constructed
-strict: False
-# groups:
-#  group1: inventory_hostname.startswith('rhel')
+strict: true
 keyed_groups:
-    # this creates a group per distro (distro_CentOS, distro_Debian) and assigns the hosts that have matching values to it,
-    # using the default separator "_"
-    - prefix: distro
-      key: os
+  - key: platform_details
+    separator: ''
