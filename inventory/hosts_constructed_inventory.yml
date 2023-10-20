@@ -1,5 +1,5 @@
 ---
-plugin: constructed
+plugin: ansible.builtin.constructed
 keyed_groups:
   - key: os
     seperator: ""
