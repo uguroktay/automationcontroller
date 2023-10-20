@@ -1,7 +1,7 @@
 ---
 plugin: ansible.builtin.constructed
 groups:
-  group1: inventory_hostname.startswith('1')
+  group1: inventory_hostname.startswith('rhel')
 keyed_groups:
   - key: os
     seperator: ""
