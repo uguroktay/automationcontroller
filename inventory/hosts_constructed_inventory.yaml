@@ -1,5 +1,6 @@
 ---
 plugin: ansible.builtin.constructed
+strict: true
 # groups:
 #  group1: inventory_hostname.startswith('rhel')
 keyed_groups:
