@@ -3,4 +3,4 @@ plugin: ansible.builtin.constructed
 # groups:
 #  group1: inventory_hostname.startswith('rhel')
 keyed_groups:
-  - key: ansible_distribution
+  - key: os
