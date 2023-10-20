@@ -4,4 +4,7 @@ strict: False
 # groups:
 #  group1: inventory_hostname.startswith('rhel')
 keyed_groups:
-  - key: os
+    # this creates a group per distro (distro_CentOS, distro_Debian) and assigns the hosts that have matching values to it,
+    # using the default separator "_"
+    - prefix: distro
+      key: os
