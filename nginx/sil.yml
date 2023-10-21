@@ -1,0 +1,8 @@
+---
+- hosts: all
+  gather_facts: no
+  vars:
+    package_names: "test message"
+  tasks:
+  - debug:
+      msg: "On {{ inventory_hostname }} machine, following packages have been installed/updated {{ package_names }}"
