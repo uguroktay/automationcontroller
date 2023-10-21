@@ -1,6 +1,6 @@
 ---
 roles:
-  - name: nginxinc.nginx
+  - name: geerlingguy.nginx
 
 collections:
   - name: ansible.posix
