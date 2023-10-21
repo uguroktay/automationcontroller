@@ -1,9 +1,9 @@
 ---
 - name: Converge
   hosts: rhel2
+  roles:
+    - { role: geerlingguy.nginx }
   tasks:
     - name: Install NGINX
       ansible.builtin.include_role:
-        name: nginxinc.nginx
-      vars:
-        nginx_branch: stable
+        name: geerlingguy.nginx
