@@ -1,6 +1,6 @@
 ---
 - name: Converge
-  hosts: all
+  hosts: rhel2
   tasks:
     - name: Install NGINX
       ansible.builtin.include_role:
