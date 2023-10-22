@@ -4,6 +4,6 @@
   tasks:
   - name: Update required packages
     ansible.builtin.dnf:
-      name: *
+      name: "*"
       state: latest
       update_cache: yes
