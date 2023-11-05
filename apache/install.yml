@@ -1,0 +1,24 @@
+---
+- name: install web server packages
+  hosts: all
+  tasks:
+    - name: install apache and php
+      yum:
+        name: httpd,php
+        state: present
+        update_cache: true
+      notify: restart apache
+      tags:
+        - base
+    - name: start apache service
+      service: 
+        name: httpd
+        state: started
+        enabled: yes
+      tags:
+        - base
+  handlers:
+    - name: restart apache
+      service:
+        name: httpd
+        state: restarted
