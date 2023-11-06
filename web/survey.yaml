@@ -2,14 +2,16 @@
 - name: install web server packages
   hosts: all
   tasks:
-    - name: install apache and php
-      yum:
-        name: httpd,php
-        state: present
-        update_cache: true
+  - name: install packages
+    ansible.builtin.dnf:
+      name: "{{ package_name }}"
+      state: latest
+      update_cache: yes
       notify: restart apache
       tags:
         - base
+  - debug:
+      msg: "On {{ inventory_hostname }} machine, following packages have been installed/updated {{ package_name }}"
     - name: start apache service
       service: 
         name: httpd
