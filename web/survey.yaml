@@ -2,26 +2,11 @@
 - name: install web server packages
   hosts: all
   tasks:
-  - name: install packages
+  - name: update packages
     ansible.builtin.dnf:
       name: "{{ package_name }}"
       state: latest
       update_cache: yes
       update_only: yes
-      notify: restart apache
-      tags:
-        - base
   - debug:
       msg: "On {{ inventory_hostname }} machine, following packages have been installed/updated {{ package_name }}"
-    - name: start apache service
-      service: 
-        name: httpd
-        state: started
-        enabled: yes
-      tags:
-        - base
-  handlers:
-    - name: restart apache
-      service:
-        name: httpd
-        state: restarted
