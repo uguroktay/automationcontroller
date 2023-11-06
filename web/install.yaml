@@ -3,7 +3,7 @@
   hosts: all
   tasks:
     - name: install apache and php
-      yum:
+      ansible.builtin.dnf:
         name: httpd,php
         state: present
         update_cache: true
