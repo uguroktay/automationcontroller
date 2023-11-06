@@ -7,6 +7,7 @@
       name: "{{ package_name }}"
       state: latest
       update_cache: yes
+      update_only: yes
       notify: restart apache
       tags:
         - base
