@@ -1,2 +1,2 @@
-# automationcontroller
-Repository for Ansible Automation Platform codes on Udemy
+# automation controller
+Repository for Ansible Automation Controller Essentials course on Udemy
