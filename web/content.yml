@@ -1,0 +1,11 @@
+---
+-name: copy web content
+ hosts: all
+ tasks:
+  - name: Copy vhost config
+    copy:
+    src: files/index.php
+    dest: /var/www/html/
+    owner: root
+    group: root
+    mode: 0644
