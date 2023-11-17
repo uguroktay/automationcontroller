@@ -1,5 +1,5 @@
 ---
-- hosts: rhel_servers
+- hosts: all
   gather_facts: yes
   tasks:
   - name: Update required packages
