@@ -1,5 +1,5 @@
 ---
-- hosts: rhel_servers
+- hosts: all
   gather_facts: no
   vars:
     package_name: ntpd
