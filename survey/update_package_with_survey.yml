@@ -1,11 +1,6 @@
 ---
 - hosts: all
   gather_facts: no
-  vars:
-    package_name: ntpd
-  tasks:
-  - debug:
-      msg: "{{ package_name }}"
   - name: Update required packages
     ansible.builtin.dnf:
       name: "{{ package_name }}"
