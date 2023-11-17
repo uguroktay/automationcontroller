@@ -1,5 +1,6 @@
 ---
 - hosts: all
+  name: update packages
   gather_facts: no
   - name: Update required packages
     ansible.builtin.dnf:
