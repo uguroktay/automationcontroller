@@ -1,3 +1,6 @@
+---
+- hosts: all
+  gather_facts: no
 - name: packages to update
   shell: yum list updates | awk 'f;/Updated Packages/{f=1;}' | awk '{ print $1 }'
   changed_when: updates.stdout_lines | length > 0
