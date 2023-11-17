@@ -1,5 +1,5 @@
 ---
-- hosts: Rhel_Servers
+- hosts: all
   gather_facts: no
   tasks:
     - name: packages to update
