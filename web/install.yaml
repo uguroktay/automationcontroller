@@ -8,15 +8,11 @@
         state: present
         update_cache: true
       notify: restart apache
-      tags:
-        - base
     - name: start apache service
       ansible.builtin.service: 
         name: httpd
         state: started
         enabled: yes
-      tags:
-        - base
   handlers:
     - name: restart apache
       ansible.builtin.service:
