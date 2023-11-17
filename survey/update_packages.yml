@@ -1,9 +1,0 @@
----
-- hosts: all
-  gather_facts: yes
-  tasks:
-  - name: Update required packages
-    ansible.builtin.dnf:
-      name: "*"
-      state: latest
-      update_cache: yes
