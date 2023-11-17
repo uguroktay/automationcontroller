@@ -11,7 +11,7 @@
       tags:
         - base
     - name: start apache service
-      service: 
+      ansible.builtin.service: 
         name: httpd
         state: started
         enabled: yes
@@ -19,6 +19,6 @@
         - base
   handlers:
     - name: restart apache
-      service:
+      ansible.builtin.service:
         name: httpd
         state: restarted
