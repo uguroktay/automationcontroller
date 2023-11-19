@@ -2,6 +2,7 @@
 - hosts: all
   name: update packages
   gather_facts: no
+  tasks:
   - name: Update required packages
     ansible.builtin.dnf:
       name: "{{ package_name }}"
