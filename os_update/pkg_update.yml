@@ -4,7 +4,7 @@
   tasks:
   - name: Update required packages
     ansible.builtin.dnf:
-      name: httpd
+      name: *
       state: latest
       update_cache: yes
 
