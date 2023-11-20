@@ -2,7 +2,7 @@
 - hosts: all
   gather_facts: yes
   tasks:
-  - name: Update required packages
+  - name: Update all packages
     ansible.builtin.dnf:
       name: "*"
       state: latest
