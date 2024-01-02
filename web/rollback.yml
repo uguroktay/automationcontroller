@@ -6,3 +6,7 @@
       ansible.builtin.dnf:
         name: httpd,php
         state: absent
+    - name: remove index.php file
+      ansible.builtin.file:
+      path: files/index.php
+      state: absent
