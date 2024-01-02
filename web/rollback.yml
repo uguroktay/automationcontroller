@@ -1,0 +1,8 @@
+---
+- name: rollback
+  hosts: all
+  tasks:
+    - name: uninstall apache and php
+      ansible.builtin.dnf:
+        name: httpd,php
+        state: absent
