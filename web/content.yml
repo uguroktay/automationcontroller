@@ -3,9 +3,9 @@
   hosts: all
   tasks:
    - name: Copy web content
-     copy:
-     src: files/index.php
-     dest: /var/www/html/
-     owner: root
-     group: root
-     mode: 0644
+     ansible.builtin.copy:
+       src: files/index.php
+       dest: /var/www/html/
+       owner: root
+       group: root
+       mode: 0644
