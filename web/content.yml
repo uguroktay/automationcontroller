@@ -2,7 +2,7 @@
 -name: copy web content
  hosts: all
  tasks:
-  - name: Copy vhost config
+  - name: Copy web content
     copy:
     src: files/index.php
     dest: /var/www/html/
