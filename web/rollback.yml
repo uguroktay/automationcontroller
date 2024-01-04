@@ -8,5 +8,5 @@
         state: absent
     - name: remove index.php file
       ansible.builtin.file:
-        path: files/index.php
+        path: /var/www/html/index.php
         state: absent
